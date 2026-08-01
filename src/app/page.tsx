@@ -1,9 +1,10 @@
-import Image from "next/image";
-
+import Homepage from "@/components/Homepage";
 export default function Home() {
   return (
    <>
-     <h1>hello word</h1>
+         <main className="min-h-screen bg-black/[0.96] antialiased bg-grid-white/[0.02]">
+           <Homepage/>
+         </main>
    </>
   );
 }
