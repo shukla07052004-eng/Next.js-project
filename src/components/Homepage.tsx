@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { Button } from "./ui/moving-border";
 import { Spotlight } from "@/components/ui/spotlight";
+// import { mainButton } from "@/components/ui/stateful-button";
 
 function Homepage() {
     return (
@@ -13,6 +14,7 @@ function Homepage() {
                 className="-top-40 left-0 md:-top-20 md:left-60"
                 fill="white"
             />
+            
             <div className="p-4 relative z-10 w-full text-center">
 
                 <h1
@@ -27,8 +29,8 @@ function Homepage() {
                 <div className="mt-4">
                     <Link href={'/'}>
                         <Button
-                            borderRadius="1.75rem"
-                            className="bg-black dark:bg-black text-white dark:text-white border-neutral-200 dark:border-slate-800"
+                            borderRadius='1.75rem'
+                            className="bg-black dark:bg-black text-white dark:text-white border-slate-900 dark:border-slate-800"
                         >
                             Explore courses
                         </Button>
