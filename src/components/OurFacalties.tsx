@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import { AnimatedTooltip } from "./ui/animated-tooltip";
+import { WavyBackground } from "./ui/wavy-background";
+import { div } from "motion/react-client";
 const people = [
   {
     id: 1,
@@ -48,17 +50,23 @@ const people = [
 
 export function AnimatedTooltipPreview() {
   return (
-    <div className=" flex flex-col items-center justify-center mb-10 w-full relative flex h-[40rem] bg-slate-900 dark:bg-black">
-      <div>
-        <h2
-          className="mt-20 md:mt-0 text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"
-        >Meet Our Instructors
-        </h2>
-      </div>
-      <div className="flex flex-row items-center justify-center m-10">
+    <div className=" flex flex-col items-center justify-center  w-full relative flex h-[40rem] bg-slate-900 dark:bg-black">
 
-        <AnimatedTooltip items={people} />
-      </div>
+      <WavyBackground className="max-w-4xl mx-auto ">
+        <div className="text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center">
+          <h2
+            className="mt-20 md:mt-0 text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"
+          >Meet Our Instructors
+          </h2>
+        </div>
+        <div className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center">
+          <div className="flex flex-row items-center justify-center m-10">
+
+            <AnimatedTooltip items={people} />
+          </div>
+        </div>
+      </WavyBackground>
     </div>
+
   );
 }
