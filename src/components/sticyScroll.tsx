@@ -37,11 +37,11 @@ const musicSchoolContent = [
   ];
 export function StickyScrollRevealDemo() {
   return (
-    <div className="w-full py-4">
+    <div className="w-full py-4 bg-slate-900">
        <div className="text-center">
-        <h1 className="text-3xl justify-center flex item-center text-teal-900 font-bold tracking-wide uppercase">
+        {/* <h1 className="text-3xl justify-center flex item-center text-teal-900 font-bold tracking-wide uppercase">
             WhyChooseUs
-        </h1>
+        </h1> */}
        </div>
 
        <div className="">
