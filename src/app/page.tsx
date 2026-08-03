@@ -2,6 +2,7 @@ import Homepage from "@/components/Homepage";
 import {CardHoverEffectDemo} from "@/components/cardsSection"
 import { StickyScrollRevealDemo } from "@/components/sticyScroll"
 import {InfiniteMovingCardsDemo} from "@/components/movingCards"
+import {AnimatedTooltipPreview} from "@/components/OurFacalties"
 export default function Home() {
   return (
    <>
@@ -10,6 +11,7 @@ export default function Home() {
            <CardHoverEffectDemo/>
            <StickyScrollRevealDemo/>
            <InfiniteMovingCardsDemo/>
+           <AnimatedTooltipPreview/>
          </main>
    </>
   );
