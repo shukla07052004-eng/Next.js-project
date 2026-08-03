@@ -1,5 +1,6 @@
 "use client"
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards"
+import { cn } from "@/utils/utils"
 const musicSchoolTestimonials = [
     {
         quote:
@@ -36,23 +37,63 @@ const musicSchoolTestimonials = [
 
 export function InfiniteMovingCardsDemo() {
     return (
-        <div className="h-[40rem] bg-slate-900 rounded-md flex flex-col antialiased dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+        <div className="relative flex h-[20rem] w-full items-center justify-center bg-slate-900 dark:bg-black">
 
-            <div className="">
-                <h2 className="text-3xl font-bold text-white text-center mb-8 z-10">Hear our Harmony: Voices of success</h2>
-                <div className="flex justify-center w-full overflow-hidden px-4 sm:px-6 lg:px-8">
-                    <div className="w-full max-w-6xl">
-                        <InfiniteMovingCards
-                            items={musicSchoolTestimonials}
-                            direction="right"
-                            speed="slow"
-                        />
+            <div
+                className={cn(
+                    "absolute inset-0",
+                    "[background-size:20px_20px]",
+                    "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
+                    "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]",
+                )}
 
-                    </div>
+            />
+            <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-slate-900 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
+            <h2 className="text-3xl relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl font-bold text-white text-center mb-8 z-10">Hear our Harmony: Voices of success</h2>
+            <div className="flex justify-center w-full overflow-hidden px-4 sm:px-6 lg:px-8">
+                <div className="w-full max-w-6xl">
+                    <InfiniteMovingCards
+                        items={musicSchoolTestimonials}
+                        direction="right"
+                        speed="slow"
+                    />
+
                 </div>
-
             </div>
 
         </div>
+
     );
+    // <div className="relative flex h-[50rem] w-full items-center justify-center bg-white dark:bg-black">
+    //     <div
+    //         className={cn(
+    //             "absolute inset-0",
+    //             "[background-size:40px_40px]",
+    //             "[background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]",
+    //             "dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]",
+    //         )}
+    //     />
+    //     {/* Radial gradient for the container to give a faded look */}
+    //     <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
+    //     <div className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl">
+    //         <div className="h-[40rem] bg-slate-900 rounded-md flex flex-col antialiased dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+
+    //             <div className="">
+    //                 <h2 className="text-3xl font-bold text-white text-center mb-8 z-10">Hear our Harmony: Voices of success</h2>
+    //                 <div className="flex justify-center w-full overflow-hidden px-4 sm:px-6 lg:px-8">
+    //                     <div className="w-full max-w-6xl">
+    //                         <InfiniteMovingCards
+    //                             items={musicSchoolTestimonials}
+    //                             direction="right"
+    //                             speed="slow"
+    //                         />
+
+    //                     </div>
+    //                 </div>
+
+    //             </div>
+
+    //         </div>
+    //     </div>
+    // </div>
 }
